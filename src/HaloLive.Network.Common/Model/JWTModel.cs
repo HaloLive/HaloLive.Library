@@ -48,6 +48,7 @@ namespace HaloLive.Network.Common
 			: this()
 		{
 			if (string.IsNullOrWhiteSpace(accessToken)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(accessToken));
+
 			AccessToken = accessToken;
 		}
 

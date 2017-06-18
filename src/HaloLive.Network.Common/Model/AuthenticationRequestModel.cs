@@ -47,6 +47,14 @@ namespace HaloLive.Network.Common
 			Password = password;
 		}
 
+		/// <summary>
+		/// Serializer ctor
+		/// </summary>
+		private AuthenticationRequestModel()
+		{
+			
+		}
+
 		/// <inheritdoc />
 		public override string ToString()
 		{
