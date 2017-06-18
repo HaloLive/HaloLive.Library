@@ -55,12 +55,12 @@ namespace HaloLive.Network.Common
 		/// Creates a JWTModel that contains an valid non-null <see cref="AccessToken"/>.
 		/// </summary>
 		/// <param name="accessToken"></param>
+		/// <param name="errorDescription"></param>
 		public JWTModel([NotNull] string error, [NotNull] string errorDescription)
 			: this()
 		{
 			if (string.IsNullOrWhiteSpace(error)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(error));
-
-			//Error description can possibly be optional
+			if (string.IsNullOrWhiteSpace(errorDescription)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(errorDescription));
 
 			Error = error;
 			ErrorDescription = errorDescription;
