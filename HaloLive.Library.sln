@@ -7,8 +7,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82223BC2-FD4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Common", "src\HaloLive.Common\HaloLive.Common.csproj", "{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Network.Common", "src\HaloLive.Network.Common\HaloLive.Network.Common.csproj", "{0AF326B7-3343-42FC-A902-AD7FFAC9F619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Network.Common.Tests", "tests\HaloLive.Network.Common.Tests\HaloLive.Network.Common.Tests.csproj", "{F7814015-1635-4638-8F7B-655D5678BFE8}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7814015-1635-4638-8F7B-655D5678BFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7814015-1635-4638-8F7B-655D5678BFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7814015-1635-4638-8F7B-655D5678BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7814015-1635-4638-8F7B-655D5678BFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
+		{0AF326B7-3343-42FC-A902-AD7FFAC9F619} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
+		{F7814015-1635-4638-8F7B-655D5678BFE8} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
 	EndGlobalSection
 EndGlobal
