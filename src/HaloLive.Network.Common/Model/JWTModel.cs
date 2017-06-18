@@ -17,21 +17,21 @@ namespace HaloLive.Network.Common
 		/// </summary>
 		[CanBeNull]
 		[JsonProperty(PropertyName = "access_token", Required = Required.Default)] //optional because could be an error
-		public string AccessToken { get; private set; }
+		public string AccessToken { get; private set; } //WARNING: Don't make these readonly. It breakes for some reason.
 
 		/// <summary>
 		/// Error type if an error was encountered.
 		/// </summary>
 		[CanBeNull]
 		[JsonProperty(PropertyName = "error", Required = Required.Default)] //optional because could be a valid token
-		public string Error { get; private set; }
+		public string Error { get; private set; } //WARNING: Don't make these readonly. It breakes for some reason.
 
 		/// <summary>
 		/// Humanreadable read description.
 		/// </summary>
 		[CanBeNull]
 		[JsonProperty(PropertyName = "error_description", Required = Required.Default)] //optional because could be a valid token
-		public string ErrorDescription { get; private set; }
+		public string ErrorDescription { get; private set; } //WARNING: Don't make these readonly. It breakes for some reason.
 
 		private Lazy<bool> _isTokenValid { get; }
 
