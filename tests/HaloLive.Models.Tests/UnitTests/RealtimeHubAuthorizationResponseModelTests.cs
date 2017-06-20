@@ -33,6 +33,32 @@ namespace HaloLive.Models.Tests
 		}
 
 		[Test]
+		[TestCase(RealtimeHubAuthorizationResponseCode.AlreadyAuthorized)]
+		[TestCase(RealtimeHubAuthorizationResponseCode.ConnectionAuthorizedToDifferentClient)]
+		[TestCase(RealtimeHubAuthorizationResponseCode.InvalidAuthorizationCredentials)]
+		[TestCase(RealtimeHubAuthorizationResponseCode.GeneralServiceUnavailable)]
+		[TestCase(RealtimeHubAuthorizationResponseCode.HubConnectionAuthRequestAddressMismatch)]
+		public static void Test_isSuccessful_False_On_Failed_ResponseCodes(RealtimeHubAuthorizationResponseCode value)
+		{
+			//arrange
+			RealtimeHubAuthorizationResponseModel model = new RealtimeHubAuthorizationResponseModel(value);
+
+			//assert
+			Assert.False(model.isSuccessful);
+		}
+
+		[Test]
+		[TestCase(RealtimeHubAuthorizationResponseCode.Success)]
+		public static void Test_isSuccessful_True_On_Success(RealtimeHubAuthorizationResponseCode value)
+		{
+			//arrange
+			RealtimeHubAuthorizationResponseModel model = new RealtimeHubAuthorizationResponseModel(value);
+
+			//assert
+			Assert.True(model.isSuccessful);
+		}
+
+		[Test]
 		[TestCase(RealtimeHubAuthorizationResponseCode.InvalidAuthorizationCredentials)]
 		[TestCase(RealtimeHubAuthorizationResponseCode.ConnectionAuthorizedToDifferentClient)]
 		[TestCase(RealtimeHubAuthorizationResponseCode.AlreadyAuthorized)]
