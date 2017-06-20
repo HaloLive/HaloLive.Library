@@ -1,6 +1,16 @@
 # HaloLive.Library
 Library containing assemblies for the HaloLive project.
 
+## Setup
+
+To use this project you'll first need a couple of things:
+
+* Visual Studio 2017
+
+## Builds
+
+TODO
+
 ## Tests
 
 |    | Linux Debug | Windows .NET Debug |
