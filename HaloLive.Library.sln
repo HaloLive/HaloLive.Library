@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82223BC2-FD46-45B7-8714-A1BBB6FACC0E}"
 EndProject
@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCFAE99C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Common", "src\HaloLive.Common\HaloLive.Common.csproj", "{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Network.Common", "src\HaloLive.Network.Common\HaloLive.Network.Common.csproj", "{0AF326B7-3343-42FC-A902-AD7FFAC9F619}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Metadata.Common", "src\HaloLive.Metadata.Common\HaloLive.Metadata.Common.csproj", "{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Network.Common.Tests", "tests\HaloLive.Network.Common.Tests\HaloLive.Network.Common.Tests.csproj", "{F7814015-1635-4638-8F7B-655D5678BFE8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B6F91A5F-5460-41DF-9CB2-7107B191303E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Authentication.Common", "src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj", "{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Tests", "tests\HaloLive.Models.Tests\HaloLive.Models.Tests.csproj", "{6C3814D6-628E-4FB7-B295-A039482DEC1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,21 +27,27 @@ Global
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AF326B7-3343-42FC-A902-AD7FFAC9F619}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7814015-1635-4638-8F7B-655D5678BFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7814015-1635-4638-8F7B-655D5678BFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7814015-1635-4638-8F7B-655D5678BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7814015-1635-4638-8F7B-655D5678BFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3814D6-628E-4FB7-B295-A039482DEC1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3814D6-628E-4FB7-B295-A039482DEC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3814D6-628E-4FB7-B295-A039482DEC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3814D6-628E-4FB7-B295-A039482DEC1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
-		{0AF326B7-3343-42FC-A902-AD7FFAC9F619} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
-		{F7814015-1635-4638-8F7B-655D5678BFE8} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
+		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
+		{B6F91A5F-5460-41DF-9CB2-7107B191303E} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
+		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A} = {B6F91A5F-5460-41DF-9CB2-7107B191303E}
+		{6C3814D6-628E-4FB7-B295-A039482DEC1D} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
 	EndGlobalSection
 EndGlobal
