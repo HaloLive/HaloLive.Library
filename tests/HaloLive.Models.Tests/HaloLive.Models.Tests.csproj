@@ -53,11 +53,16 @@
     <Compile Include="UnitTests\AuthenticationRequestModelTests.cs" />
     <Compile Include="UnitTests\JSONToProtobufFutureCompatabilityTests.cs" />
     <Compile Include="UnitTests\JWTModelTests.cs" />
+    <Compile Include="UnitTests\RealtimeHubAuthorizationRequestModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\HaloLive.Models.Authorization.Common\HaloLive.Models.Authorization.Common.csproj">
+      <Project>{8aa54a70-6225-4c98-b544-6e7c9524558c}</Project>
+      <Name>HaloLive.Models.Authorization.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj">
       <Project>{e2c9bac4-9589-443e-85ad-c6aa73690a5a}</Project>
       <Name>HaloLive.Models.Authentication.Common</Name>

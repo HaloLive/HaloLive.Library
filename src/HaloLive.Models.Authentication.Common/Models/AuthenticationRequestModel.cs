@@ -4,13 +4,13 @@ using System.Text;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 
-namespace HaloLive.Network.Common
+namespace HaloLive.Models.Authentication
 {
 	/// <summary>
 	/// The authentication request model.
 	/// </summary>
 	[JsonObject]
-	public sealed class AuthenticationRequestModel
+	public sealed class AuthenticationRequestModel : IUserAuthenticationDetailsContainer
 	{
 		/// <summary>
 		/// Username for the authentication request.

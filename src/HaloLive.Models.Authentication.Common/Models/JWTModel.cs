@@ -4,7 +4,7 @@ using System.Text;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 
-namespace HaloLive.Network.Common
+namespace HaloLive.Models.Authentication
 {
 	/// <summary>
 	/// JWT Token model.
