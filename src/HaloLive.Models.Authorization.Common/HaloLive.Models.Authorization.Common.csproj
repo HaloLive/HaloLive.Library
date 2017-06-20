@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HaloLive.Metadata.Common\HaloLive.Metadata.Common.csproj" />
+    <ProjectReference Include="..\HaloLive.Models.Common\HaloLive.Models.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

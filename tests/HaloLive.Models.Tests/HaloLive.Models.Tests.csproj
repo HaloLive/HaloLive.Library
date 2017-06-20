@@ -54,6 +54,7 @@
     <Compile Include="UnitTests\JSONToProtobufFutureCompatabilityTests.cs" />
     <Compile Include="UnitTests\JWTModelTests.cs" />
     <Compile Include="UnitTests\RealtimeHubAuthorizationRequestModelTests.cs" />
+    <Compile Include="UnitTests\RealtimeHubAuthorizationResponseModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -66,6 +67,10 @@
     <ProjectReference Include="..\..\src\HaloLive.Models.Authorization.Common\HaloLive.Models.Authorization.Common.csproj">
       <Project>{1135c6c2-83b0-48cb-9579-e6656548f0fd}</Project>
       <Name>HaloLive.Models.Authorization.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\HaloLive.Models.Common\HaloLive.Models.Common.csproj">
+      <Project>{58e1446f-9225-48c8-9c8a-4aea93a1ae63}</Project>
+      <Name>HaloLive.Models.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

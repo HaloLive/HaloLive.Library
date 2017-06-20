@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HaloLive.Models.Common
+namespace HaloLive.Models
 {
 	//The concept here is that response models should be related to a request.
 	//The request should have an enumerable state of results that the response can be in.
@@ -10,7 +10,7 @@ namespace HaloLive.Models.Common
 	/// Contract for models that are responses to a request.
 	/// </summary>
 	public interface IResponseModel<out TResultType>
-		where TResultType : struct, IComparable, IEquatable<TResultType> //can't contrain to enum even though the CLR can =(
+		where TResultType : struct, IComparable //try to constrain to enum
 	{
 		/// <summary>
 		/// Indicates the result of the response.
