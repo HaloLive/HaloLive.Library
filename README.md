@@ -1,5 +1,6 @@
 # HaloLive.Library
-Library containing assemblies for the HaloLive project.
+
+Library containing assemblies for the HaloLive project. If you're looking for information or documentation consult the [Documentation Repo](https://github.com/HaloLive/Documentation) that contains design diagrams, endpoint and request/response documentation and information about much more.
 
 ## Setup
 
