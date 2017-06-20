@@ -5,16 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="10.4.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\HaloLive.Metadata.Common\HaloLive.Metadata.Common.csproj" />
+    <ProjectReference Include="..\HaloLive.Metadata.Common\HaloLive.Metadata.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="JetBrains.Annotations">
-      <HintPath>..\..\..\..\.nuget\packages\jetbrains.annotations\10.4.0\lib\netstandard1.0\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
     </Reference>
   </ItemGroup>
 

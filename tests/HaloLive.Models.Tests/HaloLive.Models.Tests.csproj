@@ -59,13 +59,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\HaloLive.Models.Authorization.Common\HaloLive.Models.Authorization.Common.csproj">
-      <Project>{8aa54a70-6225-4c98-b544-6e7c9524558c}</Project>
-      <Name>HaloLive.Models.Authorization.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj">
       <Project>{e2c9bac4-9589-443e-85ad-c6aa73690a5a}</Project>
       <Name>HaloLive.Models.Authentication.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\HaloLive.Models.Authorization.Common\HaloLive.Models.Authorization.Common.csproj">
+      <Project>{1135c6c2-83b0-48cb-9579-e6656548f0fd}</Project>
+      <Name>HaloLive.Models.Authorization.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
