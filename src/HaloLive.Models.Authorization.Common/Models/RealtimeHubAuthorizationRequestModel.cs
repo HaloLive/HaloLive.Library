@@ -12,8 +12,8 @@ namespace HaloLive.Models.Authorization
 	/// <summary>
 	/// Model/request that should be sent to preform the authorization step for a realtime hub session.
 	/// </summary>
-	[RequiresAuthorization]
 	[JsonObject]
+	[RequiresAuthorization]
 	public sealed class RealtimeHubAuthorizationRequestModel
 	{
 		//TODO: Security audit
