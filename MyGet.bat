@@ -1,2 +1,2 @@
-dotnet restore HaloLive.Library.sln -NoCache -NonInteractive -ConfigFile Nuget.config
+dotnet restore HaloLive.Library.sln
 msbuild Booma.Library.sln /p:Configuration=Release
