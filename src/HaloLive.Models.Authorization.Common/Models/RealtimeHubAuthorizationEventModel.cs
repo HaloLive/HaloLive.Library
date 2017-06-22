@@ -14,7 +14,7 @@ namespace HaloLive.Models.Authorization
 	/// </summary>
 	[JsonObject]
 	[RequiresAuthorization]
-	public sealed class RealtimeHubAuthorizationRequestModel
+	public sealed class RealtimeHubAuthorizationEventModel
 	{
 		//TODO: Security audit
 		//To understand this you must know that at this point a JWT must have been issued to this user during authentication.
@@ -28,7 +28,7 @@ namespace HaloLive.Models.Authorization
 		[JsonProperty(Required = Required.Always)]
 		public string HubConnectionId { get; }
 
-		public RealtimeHubAuthorizationRequestModel([NotNull] string hubConnectionId)
+		public RealtimeHubAuthorizationEventModel([NotNull] string hubConnectionId)
 		{
 			if (string.IsNullOrWhiteSpace(hubConnectionId)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(hubConnectionId));
 
@@ -38,7 +38,7 @@ namespace HaloLive.Models.Authorization
 		/// <summary>
 		/// Protected serializer ctor
 		/// </summary>
-		protected RealtimeHubAuthorizationRequestModel()
+		protected RealtimeHubAuthorizationEventModel()
 		{
 			
 		}

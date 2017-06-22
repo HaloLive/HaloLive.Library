@@ -20,7 +20,7 @@ namespace HaloLive.Network.Common.Tests
 			//arrange
 			IEnumerable<Type> JSONDTOTypes = GetAllJsonObjectTypesFromAssemblyType(typeof(JWTModel));
 
-			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(RealtimeHubAuthorizationRequestModel)));
+			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(RealtimeHubAuthorizationEventModel)));
 
 			//assert
 			foreach (Type t in JSONDTOTypes)

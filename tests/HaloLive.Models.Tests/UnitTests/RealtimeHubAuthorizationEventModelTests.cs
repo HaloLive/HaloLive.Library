@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace HaloLive.Models.Tests.UnitTests
 {
 	[TestFixture]
-	public static class RealtimeHubAuthorizationRequestModelTests
+	public static class RealtimeHubAuthorizationEventModelTests
 	{
 		[Test]
 		[TestCase("")]
@@ -19,7 +19,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Throws_On_Construction_With_Invalid_Argument(string value)
 		{
 			//assert
-			Assert.Throws<ArgumentException>(() => new RealtimeHubAuthorizationRequestModel(value));
+			Assert.Throws<ArgumentException>(() => new RealtimeHubAuthorizationEventModel(value));
 		}
 
 		[Test]
@@ -28,7 +28,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Doesnt_Throw_On_Valid_Arguments(string value)
 		{
 			//assert
-			Assert.DoesNotThrow(() => new RealtimeHubAuthorizationRequestModel(value));
+			Assert.DoesNotThrow(() => new RealtimeHubAuthorizationEventModel(value));
 		}
 
 		[Test]
@@ -37,7 +37,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_To_NonNull_Non_Whitespace(string value)
 		{
 			//arrange
-			RealtimeHubAuthorizationRequestModel authModel = new RealtimeHubAuthorizationRequestModel(value);
+			RealtimeHubAuthorizationEventModel authModel = new RealtimeHubAuthorizationEventModel(value);
 
 			//act
 			string serializedModel = JsonConvert.SerializeObject(authModel);
@@ -54,11 +54,11 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_Then_Deserialize_With_Preserved_Values(string value)
 		{
 			//arrange
-			RealtimeHubAuthorizationRequestModel authModel = new RealtimeHubAuthorizationRequestModel(value);
+			RealtimeHubAuthorizationEventModel authModel = new RealtimeHubAuthorizationEventModel(value);
 
 			//act
-			RealtimeHubAuthorizationRequestModel deserializedModel =
-				JsonConvert.DeserializeObject<RealtimeHubAuthorizationRequestModel>(JsonConvert.SerializeObject(authModel));
+			RealtimeHubAuthorizationEventModel deserializedModel =
+				JsonConvert.DeserializeObject<RealtimeHubAuthorizationEventModel>(JsonConvert.SerializeObject(authModel));
 
 			//assert
 			Assert.NotNull(deserializedModel);
