@@ -6,13 +6,13 @@ using Newtonsoft.Json;
 namespace HaloLive.Models.Authorization
 {
 	/// <summary>
-	/// Model/response sent back as a response to the <see cref="RealtimeHubAuthorizationEventModel"/>.
+	/// Model/response sent back as a response to the request for authorization on a hub.
 	/// </summary>
 	[JsonObject]
 	public sealed class RealtimeHubAuthorizationResponseModel : IResponseModel<RealtimeHubAuthorizationResponseCode>, ISucceedable
 	{
 		/// <summary>
-		/// Indicates the result of the <see cref="RealtimeHubAuthorizationEventModel"/>
+		/// Indicates the result of the authorization request.
 		/// </summary>
 		[JsonProperty(Required = Required.Always)]
 		public RealtimeHubAuthorizationResponseCode ResultCode { get; }

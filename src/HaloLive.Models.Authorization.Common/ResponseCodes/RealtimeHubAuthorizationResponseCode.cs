@@ -33,12 +33,7 @@ namespace HaloLive.Models.Authorization
 		/// <summary>
 		/// Indicates that the authorization request was sent with invalid authorization credentials.
 		/// </summary>
-		InvalidAuthorizationCredentials = 4,
-
-		/// <summary>
-		/// Indicates that the auth request was sent from a different address/IP than the hub connection is established on.
-		/// </summary>
-		HubConnectionAuthRequestAddressMismatch = 5,
+		InvalidAuthorizationCredentials = 4
 
 		//TODO: Add more
 	}

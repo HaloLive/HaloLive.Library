@@ -21,7 +21,7 @@ namespace HaloLive.Network.Common.Tests
 			//arrange
 			IEnumerable<Type> JSONDTOTypes = GetAllJsonObjectTypesFromAssemblyType(typeof(JWTModel));
 
-			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(RealtimeHubAuthorizationEventModel)));
+			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(RealtimeHubAuthorizationResponseModel)));
 			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(ResolveServiceEndpointRequestModel)));
 
 			//assert

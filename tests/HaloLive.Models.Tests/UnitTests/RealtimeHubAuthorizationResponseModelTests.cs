@@ -37,7 +37,6 @@ namespace HaloLive.Models.Tests
 		[TestCase(RealtimeHubAuthorizationResponseCode.ConnectionAuthorizedToDifferentClient)]
 		[TestCase(RealtimeHubAuthorizationResponseCode.InvalidAuthorizationCredentials)]
 		[TestCase(RealtimeHubAuthorizationResponseCode.GeneralServiceUnavailable)]
-		[TestCase(RealtimeHubAuthorizationResponseCode.HubConnectionAuthRequestAddressMismatch)]
 		public static void Test_isSuccessful_False_On_Failed_ResponseCodes(RealtimeHubAuthorizationResponseCode value)
 		{
 			//arrange

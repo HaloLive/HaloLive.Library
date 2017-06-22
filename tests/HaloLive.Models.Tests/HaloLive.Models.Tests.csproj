@@ -53,7 +53,6 @@
     <Compile Include="UnitTests\AuthenticationRequestModelTests.cs" />
     <Compile Include="UnitTests\JSONToProtobufFutureCompatabilityTests.cs" />
     <Compile Include="UnitTests\JWTModelTests.cs" />
-    <Compile Include="UnitTests\RealtimeHubAuthorizationEventModelTests.cs" />
     <Compile Include="UnitTests\RealtimeHubAuthorizationResponseModelTests.cs" />
     <Compile Include="UnitTests\ResolveServiceEndpointRequestModelTests.cs" />
     <Compile Include="UnitTests\ResolveServiceEndpointResponseModelTests.cs" />
