@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HaloLive.Models.Authentication;
 using HaloLive.Models.Authorization;
+using HaloLive.Models.NameResolution;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
@@ -21,11 +22,12 @@ namespace HaloLive.Network.Common.Tests
 			IEnumerable<Type> JSONDTOTypes = GetAllJsonObjectTypesFromAssemblyType(typeof(JWTModel));
 
 			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(RealtimeHubAuthorizationEventModel)));
+			JSONDTOTypes = JSONDTOTypes.Concat(GetAllJsonObjectTypesFromAssemblyType(typeof(ResolveServiceEndpointRequestModel)));
 
 			//assert
 			foreach (Type t in JSONDTOTypes)
 			{
-				Assert.True(t.GetTypeInfo().DeclaredConstructors.Any(c => !c.GetParameters().Any()));
+				Assert.True(t.GetTypeInfo().DeclaredConstructors.Any(c => !c.GetParameters().Any()), $"The type {t.FullName} does not have a parameterless constructor.");
 			}
 		}
 

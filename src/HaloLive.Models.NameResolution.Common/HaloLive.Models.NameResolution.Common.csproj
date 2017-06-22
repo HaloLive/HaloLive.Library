@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HaloLive.Models.Common\HaloLive.Models.Common.csproj" />
     <ProjectReference Include="..\HaloLive.Network.Common\HaloLive.Network.Common.csproj" />
   </ItemGroup>
 

@@ -9,7 +9,7 @@ namespace HaloLive.Models.Authorization
 	/// Model/response sent back as a response to the <see cref="RealtimeHubAuthorizationEventModel"/>.
 	/// </summary>
 	[JsonObject]
-	public sealed class RealtimeHubAuthorizationResponseModel : IResponseModel<RealtimeHubAuthorizationResponseCode>
+	public sealed class RealtimeHubAuthorizationResponseModel : IResponseModel<RealtimeHubAuthorizationResponseCode>, ISucceedable
 	{
 		/// <summary>
 		/// Indicates the result of the <see cref="RealtimeHubAuthorizationEventModel"/>

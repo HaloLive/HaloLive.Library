@@ -56,6 +56,7 @@
     <Compile Include="UnitTests\RealtimeHubAuthorizationEventModelTests.cs" />
     <Compile Include="UnitTests\RealtimeHubAuthorizationResponseModelTests.cs" />
     <Compile Include="UnitTests\ResolveServiceEndpointRequestModelTests.cs" />
+    <Compile Include="UnitTests\ResolveServiceEndpointResponseModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
