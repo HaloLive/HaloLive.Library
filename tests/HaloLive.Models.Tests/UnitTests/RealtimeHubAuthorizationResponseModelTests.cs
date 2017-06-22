@@ -74,6 +74,7 @@ namespace HaloLive.Models.Tests
 			//assert
 			Assert.NotNull(serializedModel);
 			Assert.IsNotEmpty(serializedModel);
+			Assert.True(!serializedModel.Contains(nameof(authModel.isSuccessful)), $"JSON modle contains what should be unlisted field {nameof(authModel.isSuccessful)}. JSON: {serializedModel}");
 			Assert.True(serializedModel.Contains(((int)value).ToString()));
 		}
 

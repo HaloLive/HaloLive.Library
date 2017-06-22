@@ -20,6 +20,7 @@ namespace HaloLive.Models.Authorization
 		/// <summary>
 		/// Indicates if the authorization request is successful.
 		/// </summary>
+		[JsonIgnore]
 		public bool isSuccessful => ResultCode == RealtimeHubAuthorizationResponseCode.Success;
 
 		public RealtimeHubAuthorizationResponseModel(RealtimeHubAuthorizationResponseCode resultCode)
