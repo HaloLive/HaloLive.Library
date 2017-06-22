@@ -55,6 +55,7 @@
     <Compile Include="UnitTests\JWTModelTests.cs" />
     <Compile Include="UnitTests\RealtimeHubAuthorizationEventModelTests.cs" />
     <Compile Include="UnitTests\RealtimeHubAuthorizationResponseModelTests.cs" />
+    <Compile Include="UnitTests\ResolveServiceEndpointRequestModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -71,6 +72,14 @@
     <ProjectReference Include="..\..\src\HaloLive.Models.Common\HaloLive.Models.Common.csproj">
       <Project>{58e1446f-9225-48c8-9c8a-4aea93a1ae63}</Project>
       <Name>HaloLive.Models.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\HaloLive.Models.NameResolution.Common\HaloLive.Models.NameResolution.Common.csproj">
+      <Project>{5574aeaa-9765-4bc7-90b1-2d4508881ba2}</Project>
+      <Name>HaloLive.Models.NameResolution.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\HaloLive.Network.Common\HaloLive.Network.Common.csproj">
+      <Project>{8ba3e57c-a1c9-4372-9d7a-5f445eb6ff15}</Project>
+      <Name>HaloLive.Network.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
