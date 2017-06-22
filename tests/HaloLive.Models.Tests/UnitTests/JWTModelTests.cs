@@ -109,6 +109,8 @@ namespace HaloLive.Network.Common.Tests
 
 			//assert
 			Assert.NotNull(serializedModel);
+			Assert.True(!serializedModel.Contains(nameof(model.isTokenValid)), $"JSON modle contains what should be unlisted field {nameof(model.isTokenValid)}. JSON: {serializedModel}");
+			Assert.True(!serializedModel.Contains("_isTokenValid"), $"JSON modle contains what should be unlisted field _isTokenValid. JSON: {serializedModel}");
 			Assert.IsNotEmpty(serializedModel);
 			Assert.True(serializedModel.Contains(accessToken));
 		}

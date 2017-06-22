@@ -33,11 +33,13 @@ namespace HaloLive.Models.Authentication
 		[JsonProperty(PropertyName = "error_description", Required = Required.Default)] //optional because could be a valid token
 		public string ErrorDescription { get; private set; } //WARNING: Don't make these readonly. It breakes for some reason.
 
+		[JsonIgnore]
 		private Lazy<bool> _isTokenValid { get; }
 
 		/// <summary>
 		/// Indicates if the model contains a valid <see cref="AccessToken"/>.
 		/// </summary>
+		[JsonIgnore]
 		public bool isTokenValid => _isTokenValid.Value;
 
 		/// <summary>
@@ -53,9 +55,9 @@ namespace HaloLive.Models.Authentication
 		}
 
 		/// <summary>
-		/// Creates a JWTModel that contains an valid non-null <see cref="AccessToken"/>.
+		/// Creates an invalid <see cref="JWTModel"/> that contains an <see cref="Error"/> and <see cref="ErrorDescription"/>.
 		/// </summary>
-		/// <param name="accessToken"></param>
+		/// <param name="error"></param>
 		/// <param name="errorDescription"></param>
 		public JWTModel([NotNull] string error, [NotNull] string errorDescription)
 			: this()
