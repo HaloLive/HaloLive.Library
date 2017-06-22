@@ -10,7 +10,7 @@ To use this project you'll first need a couple of things:
 
 ## Builds
 
-TODO
+Myget: [![halolive MyGet Build Status](https://www.myget.org/BuildSource/Badge/halolive?identifier=0aa218dd-d0bf-4f44-8ee2-a2ef886e5f6f)](https://www.myget.org/)
 
 ## Tests
 
