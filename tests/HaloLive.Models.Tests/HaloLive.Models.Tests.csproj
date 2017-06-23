@@ -88,6 +88,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\HaloLive.Hosting.Server\HaloLive.Hosting.Server.csproj">
+      <Project>{80c9829d-ab40-4eca-bb5d-6446a75bf5ad}</Project>
+      <Name>HaloLive.Hosting.Server</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj">
       <Project>{e2c9bac4-9589-443e-85ad-c6aa73690a5a}</Project>
       <Name>HaloLive.Models.Authentication.Common</Name>
@@ -99,10 +103,6 @@
     <ProjectReference Include="..\..\src\HaloLive.Models.Common\HaloLive.Models.Common.csproj">
       <Project>{58e1446f-9225-48c8-9c8a-4aea93a1ae63}</Project>
       <Name>HaloLive.Models.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\HaloLive.Models.Hosting.Server\HaloLive.Models.Hosting.Server.csproj">
-      <Project>{64b1991e-9880-4113-8abd-b063a23e5e2d}</Project>
-      <Name>HaloLive.Models.Hosting.Server</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\HaloLive.Models.NameResolution.Common\HaloLive.Models.NameResolution.Common.csproj">
       <Project>{5574aeaa-9765-4bc7-90b1-2d4508881ba2}</Project>

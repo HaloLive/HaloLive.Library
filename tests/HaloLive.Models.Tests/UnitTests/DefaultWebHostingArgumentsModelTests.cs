@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommandLine;
-using HaloLive.Models.Hosting;
 using NUnit.Framework;
+using HaloLive.Hosting;
 using NUnit.Framework.Internal;
 
 namespace HaloLive.Models.Tests.UnitTests
@@ -32,7 +32,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		{
 			//act
 			Parser.Default.ParseArguments<DefaultWebHostingArgumentsModel>(args)
-				.WithParsed(model => Assert.False(model.isCustomUrlDefined || model.isHttpsEnabled || model.isJwtEnabled))
+				.WithParsed(model => Assert.False(model.isCustomUrlDefined || model.isHttpsEnabled))
 				.WithNotParsed(Assert.IsEmpty);
 		}
 
@@ -44,7 +44,7 @@ namespace HaloLive.Models.Tests.UnitTests
 			Parser.Default.ParseArguments<DefaultWebHostingArgumentsModel>(args)
 				.WithParsed(model =>
 				{
-					Assert.False(model.isCustomUrlDefined || model.isJwtEnabled || !model.isHttpsEnabled);
+					Assert.False(model.isCustomUrlDefined || !model.isHttpsEnabled);
 					Assert.AreEqual("TestCert.pfx", model.HttpsCertificateName);
 				})
 				.WithNotParsed(errors => Assert.IsEmpty(errors, $"Errors {errors.Aggregate("", (s, error) => $"{s}\n{error}")}"));
@@ -58,36 +58,21 @@ namespace HaloLive.Models.Tests.UnitTests
 			Parser.Default.ParseArguments<DefaultWebHostingArgumentsModel>(args)
 				.WithParsed(model =>
 				{
-					Assert.False(model.isHttpsEnabled || model.isJwtEnabled || !model.isCustomUrlDefined);
+					Assert.False(model.isHttpsEnabled || !model.isCustomUrlDefined);
 					Assert.AreEqual(@"http://127.0.0.1:80", model.Url);
 				})
 				.WithNotParsed(errors => Assert.IsEmpty(errors, $"Errors {errors.Aggregate("", (s, error) => $"{s}\n{error}")}"));
 		}
 
 		[Test]
-		[TestCase("--usejwt=TestCert.pfx")]
-		public static void Test_Can_Parse_Jwt_Option_from_Args(params string[] args)
-		{
-			//assert
-			Parser.Default.ParseArguments<DefaultWebHostingArgumentsModel>(args)
-				.WithParsed(model =>
-				{
-					Assert.False(model.isCustomUrlDefined || model.isHttpsEnabled || !model.isJwtEnabled);
-					Assert.AreEqual("TestCert.pfx", model.JwtCertificateName);
-				})
-				.WithNotParsed(errors => Assert.IsEmpty(errors, $"Errors {errors.Aggregate("", (s, error) => $"{s}\n{error}")}"));
-		}
-
-		[Test]
-		[TestCase("--usejwt=TestCert.pfx", @"--url=http://127.0.0.1:80", "--usehttps=TestCert.pfx")]
+		[TestCase(@"--url=http://127.0.0.1:80", "--usehttps=TestCert.pfx")]
 		public static void Test_Can_Parse_All_Option_from_Args(params string[] args)
 		{
 			//assert
 			Parser.Default.ParseArguments<DefaultWebHostingArgumentsModel>(args)
 				.WithParsed(model =>
 				{
-					Assert.True(model.isCustomUrlDefined && model.isHttpsEnabled && model.isJwtEnabled);
-					Assert.AreEqual("TestCert.pfx", model.JwtCertificateName);
+					Assert.True(model.isCustomUrlDefined && model.isHttpsEnabled);
 					Assert.AreEqual(@"http://127.0.0.1:80", model.Url);
 					Assert.AreEqual("TestCert.pfx", model.HttpsCertificateName);
 				})
