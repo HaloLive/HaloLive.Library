@@ -52,7 +52,7 @@ namespace HaloLive.Hosting
 					else
 					{
 						string prefix = model.isHttpsEnabled ? @"https://" : @"http://";
-						builder.UseUrls($@"{prefix}*:5000");
+						builder.UseUrls($@"{prefix}localhost:5000");
 					}
 				});
 
