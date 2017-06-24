@@ -17,21 +17,21 @@ namespace HaloLive.Models.Authentication
 		/// which is /api/auth but it can be configured, however it shouldn't.
 		/// </summary>
 		[JsonProperty(Required = Required.Default)]
-		public string AuthenticationControllerEndpoint { get; }
+		public string AuthenticationControllerEndpoint { get; private set; } //setters required by JSON serializer
 
 		/// <summary>
 		/// Should be the path to the X509Certificate2's path that will be used in the signing/issuing of
 		/// JWT from the authentication server.
 		/// </summary>
 		[JsonProperty(Required = Required.Default)]
-		public string JwtSigningX509Certificate2Path { get; }
+		public string JwtSigningX509Certificate2Path { get; private set; } //setters required by JSON serializer
 
 		/// <summary>
 		/// Should be the database string that will allow the authentication service to connect to the table/database
 		/// containing the auth tables.
 		/// </summary>
 		[JsonProperty(Required = Required.Always)]
-		public string AuthenticationDatabaseString { get; }
+		public string AuthenticationDatabaseString { get; private set; } //setters required by JSON serializer
 
 		/// <summary>
 		/// Creates a new configuration for the authentication server.
