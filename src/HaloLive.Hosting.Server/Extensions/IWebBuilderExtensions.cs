@@ -40,13 +40,19 @@ namespace HaloLive.Hosting
 					else
 						builder.UseKestrel();
 
+					//TODO: Should we allow both https and non-https traffic?
 					if (model.isCustomUrlDefined)
 					{
 						builder.UseUrls(model.isHttpsEnabled
 							? model.Url
 								.ToLower()
-								.Replace("http://", "https://")
+								.Replace(@"http://", @"https://")
 							: model.Url);
+					}
+					else
+					{
+						string prefix = model.isHttpsEnabled ? @"https://" : @"http://";
+						builder.UseUrls($@"{prefix}*:5000");
 					}
 				});
 
