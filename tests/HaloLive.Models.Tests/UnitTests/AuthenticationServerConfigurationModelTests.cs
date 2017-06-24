@@ -61,12 +61,15 @@ namespace HaloLive.Models.Tests.UnitTests
 
 			Assert.NotNull(deserializedModel.AuthenticationControllerEndpoint);
 			Assert.IsNotEmpty(deserializedModel.AuthenticationControllerEndpoint);
+			Assert.AreEqual(endpoint, deserializedModel.AuthenticationControllerEndpoint);
 
 			Assert.NotNull(deserializedModel.AuthenticationDatabaseString);
 			Assert.IsNotEmpty(deserializedModel.AuthenticationDatabaseString);
+			Assert.AreEqual(path, deserializedModel.JwtSigningX509Certificate2Path);
 
 			Assert.NotNull(deserializedModel.JwtSigningX509Certificate2Path);
 			Assert.IsNotEmpty(deserializedModel.JwtSigningX509Certificate2Path);
+			Assert.AreEqual(dbString, deserializedModel.AuthenticationDatabaseString);
 		}
 	}
 }
