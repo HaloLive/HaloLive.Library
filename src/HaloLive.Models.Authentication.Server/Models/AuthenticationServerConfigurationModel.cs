@@ -43,7 +43,7 @@ namespace HaloLive.Models.Authentication
 		/// <summary>
 		/// Protected serializer ctor.
 		/// </summary>
-		protected AuthenticationServerConfigurationModel()
+		public AuthenticationServerConfigurationModel()
 		{
 			
 		}
