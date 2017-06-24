@@ -21,7 +21,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Throws_On_Construction_With_Invalid_Argument_ServiceType(NetworkServiceType value)
 		{
 			//assert
-			Assert.Throws<ArgumentOutOfRangeException>(() => new ResolveServiceEndpointResponseModel(new ResolvedEndpoint("test", 55), value));
+			Assert.Throws<ArgumentOutOfRangeException>(() => new ResolveServiceEndpointResponseModel(value, new ResolvedEndpoint("test", 55)));
 		}
 
 		[Test]
@@ -29,7 +29,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Throws_On_Construction_With_Invalid_Argument_Endpoint(NetworkServiceType value)
 		{
 			//assert
-			Assert.Throws<ArgumentNullException>(() => new ResolveServiceEndpointResponseModel(null, value));
+			Assert.Throws<ArgumentNullException>(() => new ResolveServiceEndpointResponseModel(value, null));
 		}
 
 		[Test]
@@ -37,7 +37,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Doesnt_Throw_On_Valid_Arguments(NetworkServiceType serviveType)
 		{
 			//assert
-			Assert.DoesNotThrow(() => new ResolveServiceEndpointResponseModel(new ResolvedEndpoint("test", 55), serviveType));
+			Assert.DoesNotThrow(() => new ResolveServiceEndpointResponseModel(serviveType, new ResolvedEndpoint("test", 55)));
 			Assert.DoesNotThrow(() => new ResolveServiceEndpointResponseModel(serviveType, ResolveServiceEndpointResponseCode.Success));
 		}
 
@@ -61,7 +61,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_isSuccessful_True_On_Success(NetworkServiceType serviceType, string endpoint, int port)
 		{
 			//arrange
-			ResolveServiceEndpointResponseModel model = new ResolveServiceEndpointResponseModel(new ResolvedEndpoint(endpoint, port), serviceType);
+			ResolveServiceEndpointResponseModel model = new ResolveServiceEndpointResponseModel(serviceType, new ResolvedEndpoint(endpoint, port));
 
 			//assert
 			Assert.True(model.isSuccessful);
@@ -73,7 +73,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_To_NonNull_Non_Whitespace(NetworkServiceType serviceType, string endpoint, int port)
 		{
 			//arrange
-			ResolveServiceEndpointResponseModel authModel = new ResolveServiceEndpointResponseModel(new ResolvedEndpoint(endpoint, port), serviceType);
+			ResolveServiceEndpointResponseModel authModel = new ResolveServiceEndpointResponseModel(serviceType, new ResolvedEndpoint(endpoint, port));
 
 			//act
 			string serializedModel = JsonConvert.SerializeObject(authModel);
@@ -91,7 +91,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_Then_Deserialize_With_Preserved_Values(NetworkServiceType serviceType, string endpoint, int port)
 		{
 			//arrange
-			ResolveServiceEndpointResponseModel authModel = new ResolveServiceEndpointResponseModel(new ResolvedEndpoint(endpoint, port), serviceType);
+			ResolveServiceEndpointResponseModel authModel = new ResolveServiceEndpointResponseModel(serviceType, new ResolvedEndpoint(endpoint, port));
 
 			//act
 			ResolveServiceEndpointResponseModel deserializedModel =

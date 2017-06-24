@@ -32,7 +32,7 @@ namespace HaloLive.Models.NameResolution
 		[JsonIgnore]
 		public bool isSuccessful => ResultCode == ResolveServiceEndpointResponseCode.Success;
 
-		public ResolveServiceEndpointResponseModel(ResolvedEndpoint endpoint, NetworkServiceType endpointType)
+		public ResolveServiceEndpointResponseModel(NetworkServiceType endpointType, ResolvedEndpoint endpoint)
 		{
 			if (endpoint == null) throw new ArgumentNullException(nameof(endpoint));
 			if (!Enum.IsDefined(typeof(NetworkServiceType), endpointType)) throw new ArgumentOutOfRangeException(nameof(endpointType), "Value should be defined in the NetworkServiceType enum.");
