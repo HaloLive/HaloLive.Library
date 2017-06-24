@@ -23,5 +23,10 @@ namespace HaloLive.Models.NameResolution
 		/// Indicates that the service is not available right now.
 		/// </summary>
 		ServiceUnavailable = 2,
+
+		/// <summary>
+		/// Indicates that a general error has occured with the request.
+		/// </summary>
+		GeneralRequestError = 3
 	}
 }
