@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using HaloLive.Network.Common;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace HaloLive.Models.NameResolution
 {

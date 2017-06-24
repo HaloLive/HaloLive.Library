@@ -69,7 +69,7 @@ namespace HaloLive.Models.Tests.UnitTests
 			Assert.True(serializedModel.Contains(endpoints.Values.First().EndpointAddress));
 			Assert.True(serializedModel.Contains(nameof(model.ServiceEndpoints)));
 			Assert.True(serializedModel.Contains(endpoints.Values.First().EndpointPort.ToString()));
-			Assert.True(serializedModel.Contains(((int) value).ToString()));
+			Assert.True(serializedModel.Contains(value.ToString()));
 		}
 
 		[Test]
