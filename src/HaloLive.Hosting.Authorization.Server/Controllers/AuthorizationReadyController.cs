@@ -14,13 +14,13 @@ namespace HaloLive.Hosting
 	{
 		//Use GetUserId to get the HaloLive account ID.
 		//USe GetUserName to get the HaloLive account name.
-		protected UserManager<HaloLiveApplicationUser> HaloLiveUserManager { get; }
+		protected IClaimsPrincipalReader HaloLiveUserManager { get; }
 
 		/// <summary>
 		/// Creates a new authorization ready controller.
 		/// </summary>
 		/// <param name="haloLiveUserManager">The user manager to be used for identity/user authorization functions.</param>
-		protected AuthorizationReadyController([FromServices] UserManager<HaloLiveApplicationUser> haloLiveUserManager)
+		protected AuthorizationReadyController([FromServices] IClaimsPrincipalReader haloLiveUserManager)
 		{
 			if (haloLiveUserManager == null) throw new ArgumentNullException(nameof(haloLiveUserManager));
 

@@ -10,7 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace HaloLive.Hosting
 {
-	public static class IApplicationBuilderExtensions
+	public static class HaloLiveAuthorizationServerIApplicationBuilderExtensions
 	{
 		//TODO: Test this; Can't with moq due to extension methods
 		/// <summary>
@@ -20,7 +20,7 @@ namespace HaloLive.Hosting
 		/// <param name="jwtCertificate">The certificate used to check the signature of the JWT.</param>
 		/// <returns>The application builder.</returns>
 		[Obsolete("This is technically obsolete. In .NET CORE 2.0 it will be removed/changed. See https://github.com/aspnet/Home/issues/2007")]
-		public static IApplicationBuilder UseJwtAuthorization(this IApplicationBuilder builder, X509Certificate2 jwtCertificate)
+		public static IApplicationBuilder UseHaloLiveAuthorization(this IApplicationBuilder builder, X509Certificate2 jwtCertificate)
 		{
 			if (builder == null) throw new ArgumentNullException(nameof(builder));
 			if (jwtCertificate == null) throw new ArgumentNullException(nameof(jwtCertificate));
@@ -50,7 +50,8 @@ namespace HaloLive.Hosting
 
 			//TODO: THIS IS OBSOLETE in .NET CORE 2.0 https://github.com/aspnet/Home/issues/2007
 			//fluently return
-			return builder.UseJwtBearerAuthentication(bearerOptions);
+			return builder.UseJwtBearerAuthentication(bearerOptions)
+				.UseIdentity();
 		}
 	}
 }
