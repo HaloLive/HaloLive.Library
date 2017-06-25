@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using AspNet.Security.OpenIdConnect.Primitives;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.IdentityModel.Tokens;
@@ -10,6 +12,7 @@ namespace HaloLive.Hosting
 {
 	public static class IApplicationBuilderExtensions
 	{
+		//TODO: Test this; Can't with moq due to extension methods
 		/// <summary>
 		/// Registers JWT authorization in the <see cref="IApplicationBuilder"/> middleware pipeline.
 		/// </summary>
@@ -22,6 +25,11 @@ namespace HaloLive.Hosting
 			if (builder == null) throw new ArgumentNullException(nameof(builder));
 			if (jwtCertificate == null) throw new ArgumentNullException(nameof(jwtCertificate));
 
+			//This is CRITICAL for now.
+			//See https://github.com/aspnet/Security/issues/1043
+			JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+			JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();
+
 			JwtBearerOptions bearerOptions = new JwtBearerOptions
 			{
 				AutomaticAuthenticate = true,
@@ -33,7 +41,10 @@ namespace HaloLive.Hosting
 					ValidateIssuerSigningKey = false, //WARNING: This is bad. We should validate the signing key in the future
 					ValidateAudience = false,
 					ValidateIssuer = false,
-					ValidateLifetime = false //temporary until we come up with a solution
+					ValidateLifetime = false, //temporary until we come up with a solution
+
+					NameClaimType = OpenIdConnectConstants.Claims.Name,
+					RoleClaimType = OpenIdConnectConstants.Claims.Role
 				}
 			};
 
