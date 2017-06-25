@@ -33,9 +33,8 @@ namespace HaloLive.Hosting
 					ValidateIssuerSigningKey = false, //WARNING: This is bad. We should validate the signing key in the future
 					ValidateAudience = false,
 					ValidateIssuer = false,
-					ValidateLifetime = false, //temporary until we come up with a solution
-					NameClaimType = "name", //we use the name identifier since we don't care about the literal username; just a GUID/UID/ID
-				},
+					ValidateLifetime = false //temporary until we come up with a solution
+				}
 			};
 
 			//TODO: THIS IS OBSOLETE in .NET CORE 2.0 https://github.com/aspnet/Home/issues/2007
