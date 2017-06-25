@@ -7,18 +7,23 @@ namespace HaloLive.Hosting
 {
 	public class X509Certificate2Loader
 	{
-		public static X509Certificate2Loader Create(string certName)
+		/// <summary>
+		/// Creates a new X509Certificate2 loader.
+		/// </summary>
+		/// <param name="certPath">The path to the cert that should be loaded.</param>
+		/// <returns>An instance of the loader.</returns>
+		public static X509Certificate2Loader Create(string certPath)
 		{
-			return new X509Certificate2Loader(certName);
+			return new X509Certificate2Loader(certPath);
 		}
 
-		private string CertName { get; }
+		private string CertPath { get; }
 
-		public X509Certificate2Loader(string certName)
+		public X509Certificate2Loader(string certPath)
 		{
-			if (string.IsNullOrWhiteSpace(certName)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(certName));
+			if (string.IsNullOrWhiteSpace(certPath)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(certPath));
 
-			CertName = certName;
+			CertPath = certPath;
 		}
 
 		/// <summary>
@@ -30,10 +35,10 @@ namespace HaloLive.Hosting
 			X509Certificate2 cert = null;
 
 			//We only try the file store for now
-			new FileStoreX509Certificate2LoadingStrategy().TryLoadCertificate(CertName, out cert);
+			new FileStoreX509Certificate2LoadingStrategy().TryLoadCertificate(CertPath, out cert);
 
 			if(cert == null)
-				throw new InvalidOperationException($"Failed to load the certifcate {CertName}.");
+				throw new InvalidOperationException($"Failed to load the certifcate {CertPath}.");
 
 			return cert;
 		}
