@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Options;
 
 namespace HaloLive.Hosting
 {
@@ -13,11 +14,12 @@ namespace HaloLive.Hosting
 		/// </summary>
 		private IdentityOptions Options { get; }
 
-		public ClaimsPrincipalReader(IdentityOptions options)
+		public ClaimsPrincipalReader(IOptions<IdentityOptions> options)
 		{
+			//We don't allow defaults like ASP implementation does
 			if (options == null) throw new ArgumentNullException(nameof(options));
 
-			Options = options;
+			Options = options.Value;
 		}
 
 		/// <inheritdoc />
