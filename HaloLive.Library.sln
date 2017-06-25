@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Hosting.Tests", "t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Authentication.Server", "src\HaloLive.Models.Authentication.Server\HaloLive.Models.Authentication.Server.csproj", "{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Hosting.Authorization.Server", "src\HaloLive.Hosting.Authorization.Server\HaloLive.Hosting.Authorization.Server.csproj", "{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,5 +117,6 @@ Global
 		{80C9829D-AB40-4ECA-BB5D-6446A75BF5AD} = {EF18413F-A8D8-4DED-A912-F91D04ED4ADF}
 		{0CD90DDF-7D0F-4E0A-8BF2-5B58E0AEBA75} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
 		{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A} = {B6F91A5F-5460-41DF-9CB2-7107B191303E}
+		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901} = {EF18413F-A8D8-4DED-A912-F91D04ED4ADF}
 	EndGlobalSection
 EndGlobal
