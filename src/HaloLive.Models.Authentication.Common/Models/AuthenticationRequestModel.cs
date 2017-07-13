@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
+using TypeSafe.Http.Net;
 
 namespace HaloLive.Models.Authentication
 {
@@ -16,22 +17,25 @@ namespace HaloLive.Models.Authentication
 		/// Username for the authentication request.
 		/// </summary>
 		[NotNull]
+		[AliasAs("username")]
 		[JsonProperty(PropertyName = "username", Required = Required.Always)]
-		public string UserName { get; }
+		public string UserName { get; private set; } //setter required by refit
 
 		/// <summary>
 		/// Password for the authentication request.
 		/// </summary>
 		[NotNull]
+		[AliasAs("password")]
 		[JsonProperty(PropertyName = "password", Required = Required.Always)]
-		public string Password { get; }
+		public string Password { get; private set; } //setter required by refit
 
 		/// <summary>
 		/// The OAuth grant type.
 		/// </summary>
 		[NotNull]
+		[AliasAs("grant_type")]
 		[JsonProperty(PropertyName = "grant_type", Required = Required.Always)]
-		private string GrantType => "password";
+		public string GrantType { get; private set; } = "password"; //setter required by refit
 
 		/// <summary>
 		/// Creates a new Authentication Request Model.

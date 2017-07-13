@@ -7,37 +7,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82223BC2-FD4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Common", "src\HaloLive.Common\HaloLive.Common.csproj", "{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Metadata.Common", "src\HaloLive.Metadata.Common\HaloLive.Metadata.Common.csproj", "{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Common", "src\HaloLive.Common\HaloLive.Common.csproj", "{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B6F91A5F-5460-41DF-9CB2-7107B191303E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Authentication.Common", "src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj", "{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.Authentication.Common", "src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj", "{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Tests", "tests\HaloLive.Models.Tests\HaloLive.Models.Tests.csproj", "{6C3814D6-628E-4FB7-B295-A039482DEC1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Common", "src\HaloLive.Models.Common\HaloLive.Models.Common.csproj", "{58E1446F-9225-48C8-9C8A-4AEA93A1AE63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.Common", "src\HaloLive.Models.Common\HaloLive.Models.Common.csproj", "{58E1446F-9225-48C8-9C8A-4AEA93A1AE63}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.Authorization.Common", "src\HaloLive.Models.Authorization.Common\HaloLive.Models.Authorization.Common.csproj", "{1135C6C2-83B0-48CB-9579-E6656548F0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.NameResolution.Common", "src\HaloLive.Models.NameResolution.Common\HaloLive.Models.NameResolution.Common.csproj", "{5574AEAA-9765-4BC7-90B1-2D4508881BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.NameResolution.Common", "src\HaloLive.Models.NameResolution.Common\HaloLive.Models.NameResolution.Common.csproj", "{5574AEAA-9765-4BC7-90B1-2D4508881BA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{8EBCA65E-532B-48AA-9F7D-82B3E785E02B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Network.Common", "src\HaloLive.Network.Common\HaloLive.Network.Common.csproj", "{8BA3E57C-A1C9-4372-9D7A-5F445EB6FF15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Network.Common", "src\HaloLive.Network.Common\HaloLive.Network.Common.csproj", "{8BA3E57C-A1C9-4372-9D7A-5F445EB6FF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.NameResolution.Server", "src\HaloLive.Models.NameResolution.Server\HaloLive.Models.NameResolution.Server.csproj", "{5820228E-1329-41A3-99C8-D0D2B266A9F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.NameResolution.Server", "src\HaloLive.Models.NameResolution.Server\HaloLive.Models.NameResolution.Server.csproj", "{5820228E-1329-41A3-99C8-D0D2B266A9F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{EF18413F-A8D8-4DED-A912-F91D04ED4ADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Hosting.Server", "src\HaloLive.Hosting.Server\HaloLive.Hosting.Server.csproj", "{80C9829D-AB40-4ECA-BB5D-6446A75BF5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Hosting.Server", "src\HaloLive.Hosting.Server\HaloLive.Hosting.Server.csproj", "{80C9829D-AB40-4ECA-BB5D-6446A75BF5AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Hosting.Tests", "tests\HaloLive.Hosting.Tests\HaloLive.Hosting.Tests.csproj", "{0CD90DDF-7D0F-4E0A-8BF2-5B58E0AEBA75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Models.Authentication.Server", "src\HaloLive.Models.Authentication.Server\HaloLive.Models.Authentication.Server.csproj", "{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Models.Authentication.Server", "src\HaloLive.Models.Authentication.Server\HaloLive.Models.Authentication.Server.csproj", "{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Hosting.Authorization.Server", "src\HaloLive.Hosting.Authorization.Server\HaloLive.Hosting.Authorization.Server.csproj", "{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Hosting.Authorization.Server", "src\HaloLive.Hosting.Authorization.Server\HaloLive.Hosting.Authorization.Server.csproj", "{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaloLive.Network.Auth.TestClient", "tests\HaloLive.Network.Auth.TestClient\HaloLive.Network.Auth.TestClient.csproj", "{CE409226-D660-4AA9-AF10-4351FB592A87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{12F32721-E15F-4B51-A54F-DE5CA6EC9686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaloLive.Authentication.Client", "src\HaloLive.Authentication.Client\HaloLive.Authentication.Client.csproj", "{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +53,6 @@ Global
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -97,13 +97,20 @@ Global
 		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE409226-D660-4AA9-AF10-4351FB592A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE409226-D660-4AA9-AF10-4351FB592A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE409226-D660-4AA9-AF10-4351FB592A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE409226-D660-4AA9-AF10-4351FB592A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{64AF5EDA-CFAF-4BF0-B4D2-D34568BF618D} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
-		{2370EFA0-DDF1-4ADF-93C4-A2C815F5F163} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
 		{B6F91A5F-5460-41DF-9CB2-7107B191303E} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
 		{E2C9BAC4-9589-443E-85AD-C6AA73690A5A} = {B6F91A5F-5460-41DF-9CB2-7107B191303E}
 		{6C3814D6-628E-4FB7-B295-A039482DEC1D} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
@@ -118,5 +125,8 @@ Global
 		{0CD90DDF-7D0F-4E0A-8BF2-5B58E0AEBA75} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
 		{A79D6582-65D1-4AB7-B7FA-5B5AA10C742A} = {B6F91A5F-5460-41DF-9CB2-7107B191303E}
 		{B1DD94F9-5A40-4324-A87E-4BDA3BEA7901} = {EF18413F-A8D8-4DED-A912-F91D04ED4ADF}
+		{CE409226-D660-4AA9-AF10-4351FB592A87} = {FCFAE99C-C28A-44B7-A7BE-F9D5481C35B9}
+		{12F32721-E15F-4B51-A54F-DE5CA6EC9686} = {82223BC2-FD46-45B7-8714-A1BBB6FACC0E}
+		{FCD4F710-BC38-4DAB-A221-9BFC2804A8EC} = {12F32721-E15F-4B51-A54F-DE5CA6EC9686}
 	EndGlobalSection
 EndGlobal

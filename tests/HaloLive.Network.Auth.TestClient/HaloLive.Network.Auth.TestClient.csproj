@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="TypeSafe.Http.Net.Core" Version="1.0.2" />
+    <PackageReference Include="TypeSafe.Http.Net.HttpClient" Version="1.0.2" />
+    <PackageReference Include="TypeSafe.Http.Net.Serializer.JsonNET" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\HaloLive.Authentication.Client\HaloLive.Authentication.Client.csproj" />
+    <ProjectReference Include="..\..\src\HaloLive.Models.Authentication.Common\HaloLive.Models.Authentication.Common.csproj" />
+  </ItemGroup>
+
+</Project>
