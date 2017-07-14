@@ -128,7 +128,7 @@
       <HintPath>..\..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
     </Reference>
     <Reference Include="TypeSafe.Http.Net.Metadata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\TypeSafe.Http.Net.Metadata.1.0.0\lib\netstandard1.1\TypeSafe.Http.Net.Metadata.dll</HintPath>
+      <HintPath>..\..\packages\TypeSafe.Http.Net.Metadata.2.0.3\lib\net45\TypeSafe.Http.Net.Metadata.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

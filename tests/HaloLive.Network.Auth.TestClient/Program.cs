@@ -21,7 +21,7 @@ namespace HaloLive.Network.Auth.TestClient
 
 			try
 			{
-				IAuthenticationService apiInterface = new RestServiceBuilder<IAuthenticationService>()
+				IAuthenticationService apiInterface = RestServiceBuilder<IAuthenticationService>.Create()
 					.RegisterDotNetHttpClient(@"http://localhost.fiddler:5000")
 					.RegisterDefaultSerializers()
 					.RegisterJsonNetSerializer()
