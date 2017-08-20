@@ -16,5 +16,10 @@ namespace HaloLive.Network.Common
 		/// The authentication service.
 		/// </summary>
 		AuthenticationService = 1,
+
+		/// <summary>
+		/// Service that provides a list of game servers.
+		/// </summary>
+		GameServerListService = 2
 	}
 }

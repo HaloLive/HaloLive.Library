@@ -28,9 +28,11 @@ namespace HaloLive.Hosting
 						{
 							options.UseHttps(new HttpsConnectionFilterOptions()
 							{
+								//TODO: Mono doesn't support Tls1 or Tls2 and we have no way to config this. 
+								//Ssl3 is mostly safe and supported by Mono which means it will work in Unity3D now.
 								SslProtocols = System.Security.Authentication.SslProtocols.Tls
-									| System.Security.Authentication.SslProtocols.Tls11
-									| System.Security.Authentication.SslProtocols.Tls12,
+								| System.Security.Authentication.SslProtocols.Tls11 
+								| System.Security.Authentication.SslProtocols.Tls12,
 
 								//Load the cert with the cert loader
 								ServerCertificate = X509Certificate2Loader.Create(model.HttpsCertificateName).Load()

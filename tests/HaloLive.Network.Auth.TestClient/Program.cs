@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using HaloLive.Models.Authentication;
 using TypeSafe.Http.Net;
@@ -19,10 +21,12 @@ namespace HaloLive.Network.Auth.TestClient
 			Console.WriteLine("Starting.");
 			Console.ReadKey();
 
+			HttpMessageHandler handler = new HttpClientHandler() { SslProtocols = SslProtocols.Tls };
+
 			try
 			{
 				IAuthenticationService apiInterface = RestServiceBuilder<IAuthenticationService>.Create()
-					.RegisterDotNetHttpClient(@"http://localhost.fiddler:5000")
+					.RegisterDotNetHttpClient(@"https://localhost:5001")
 					.RegisterDefaultSerializers()
 					.RegisterJsonNetSerializer()
 					.Build();
