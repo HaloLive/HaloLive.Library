@@ -23,16 +23,16 @@ namespace HaloLive.Models.NameResolution
 		/// The Dictionary of services and endpoints.
 		/// </summary>
 		[JsonProperty(nameof(ServiceEndpoints), Required = Required.Default)]
-		private Dictionary<NetworkServiceType, ResolvedEndpoint> _ServiceEndpoints { get; }
+		private Dictionary<string, ResolvedEndpoint> _ServiceEndpoints { get; }
 
 		/// <summary>
 		/// The Dictionary of services and endpoints
 		/// </summary>
 		[JsonIgnore]
-		public IReadOnlyDictionary<NetworkServiceType, ResolvedEndpoint> ServiceEndpoints => _ServiceEndpoints;
+		public IReadOnlyDictionary<string, ResolvedEndpoint> ServiceEndpoints => _ServiceEndpoints;
 
 		//We don't need a real ctor because we load a file
-		public NameEndpointResolutionStorageModel(ClientRegionLocale region, Dictionary<NetworkServiceType, ResolvedEndpoint> serviceEndpoints)
+		public NameEndpointResolutionStorageModel(ClientRegionLocale region, Dictionary<string, ResolvedEndpoint> serviceEndpoints)
 		{
 			if (serviceEndpoints == null) throw new ArgumentNullException(nameof(serviceEndpoints));
 			if (!Enum.IsDefined(typeof(ClientRegionLocale), region)) throw new ArgumentOutOfRangeException(nameof(region), "Value should be defined in the ClientRegionLocale enum.");

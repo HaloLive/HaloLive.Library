@@ -21,7 +21,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Throws_On_Construction_With_Invalid_Argument_ServiceType(ClientRegionLocale value)
 		{
 			//assert
-			Assert.Throws<ArgumentOutOfRangeException>(() => new NameEndpointResolutionStorageModel(value, new Dictionary<NetworkServiceType, ResolvedEndpoint>()));
+			Assert.Throws<ArgumentOutOfRangeException>(() => new NameEndpointResolutionStorageModel(value, new Dictionary<string, ResolvedEndpoint>()));
 		}
 
 		[Test]
@@ -43,7 +43,7 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Doesnt_Throw_On_Valid_Arguments(ClientRegionLocale value)
 		{
 			//assert
-			Assert.DoesNotThrow(() => new NameEndpointResolutionStorageModel(value, new Dictionary<NetworkServiceType, ResolvedEndpoint>()));
+			Assert.DoesNotThrow(() => new NameEndpointResolutionStorageModel(value, new Dictionary<string, ResolvedEndpoint>()));
 		}
 
 		[Test]
@@ -54,9 +54,9 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_To_NonNull_Non_Whitespace(ClientRegionLocale value)
 		{
 			//arrange
-			Dictionary<NetworkServiceType, ResolvedEndpoint> endpoints = new Dictionary<NetworkServiceType, ResolvedEndpoint>()
+			Dictionary<string, ResolvedEndpoint> endpoints = new Dictionary<string, ResolvedEndpoint>()
 			{
-				{NetworkServiceType.AuthenticationService, new ResolvedEndpoint("127.0.0.1", 5555)}
+				{"AuthenticationService", new ResolvedEndpoint("127.0.0.1", 5555)}
 			};
 			NameEndpointResolutionStorageModel model = new NameEndpointResolutionStorageModel(value, endpoints);
 
@@ -80,9 +80,9 @@ namespace HaloLive.Models.Tests.UnitTests
 		public static void Test_Can_JSON_Serialize_Then_Deserialize_With_Preserved_Values(ClientRegionLocale value)
 		{
 			//arrange
-			Dictionary<NetworkServiceType, ResolvedEndpoint> endpoints = new Dictionary<NetworkServiceType, ResolvedEndpoint>()
+			Dictionary<string, ResolvedEndpoint> endpoints = new Dictionary<string, ResolvedEndpoint>()
 			{
-				{NetworkServiceType.AuthenticationService, new ResolvedEndpoint("127.0.0.1", 5555)}
+				{"AuthenticationService", new ResolvedEndpoint("127.0.0.1", 5555)}
 			};
 			NameEndpointResolutionStorageModel model = new NameEndpointResolutionStorageModel(value, endpoints);
 
@@ -95,7 +95,7 @@ namespace HaloLive.Models.Tests.UnitTests
 			Assert.NotNull(deserializedModel.ServiceEndpoints);
 			Assert.IsNotEmpty(deserializedModel.ServiceEndpoints);
 			Assert.True(Enum.IsDefined(typeof(ClientRegionLocale), deserializedModel.Region));
-			Assert.True(Enum.IsDefined(typeof(NetworkServiceType), deserializedModel.ServiceEndpoints.Keys.First()));
+			Assert.NotNull(deserializedModel.ServiceEndpoints.Keys.First());
 			Assert.AreEqual(endpoints.First().Key, deserializedModel.ServiceEndpoints.First().Key);
 			Assert.AreEqual(endpoints.First().Value.EndpointAddress, deserializedModel.ServiceEndpoints.First().Value.EndpointAddress);
 		}

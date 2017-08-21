@@ -32,8 +32,8 @@ namespace HaloLive.Models.Tests.UnitTests
 		}
 
 		[Test]
-		[TestCase(NetworkServiceType.AuthenticationService)]
-		public static void Test_Doesnt_Throw_On_Valid_Arguments(NetworkServiceType serviveType)
+		[TestCase("AuthenticationService")]
+		public static void Test_Doesnt_Throw_On_Valid_Arguments(string serviveType)
 		{
 			//assert
 			Assert.DoesNotThrow(() => new ResolveServiceEndpointResponseModel(new ResolvedEndpoint("test", 55)));

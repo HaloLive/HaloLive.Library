@@ -25,12 +25,12 @@ namespace HaloLive.Models.NameResolution
 		/// <summary>
 		/// Indicates the service requested for resolution.
 		/// </summary>
-		public NetworkServiceType ServiceType { get; }
+		public string ServiceType { get; }
 
-		public ResolveServiceEndpointRequestModel(ClientRegionLocale region, NetworkServiceType serviceType)
+		public ResolveServiceEndpointRequestModel(ClientRegionLocale region, string serviceType)
 		{
 			if (!Enum.IsDefined(typeof(ClientRegionLocale), region)) throw new ArgumentOutOfRangeException(nameof(region), "Value should be defined in the ClientRegionLocale enum.");
-			if (!Enum.IsDefined(typeof(NetworkServiceType), serviceType)) throw new ArgumentOutOfRangeException(nameof(serviceType), "Value should be defined in the NetworkServiceType enum.");
+			if (string.IsNullOrWhiteSpace(serviceType)) throw new ArgumentException("Value cannot be null or whitespace.", nameof(serviceType));
 
 			Region = region;
 			ServiceType = serviceType;
